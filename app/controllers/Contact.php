@@ -13,7 +13,12 @@ class Contact extends Main
 
     public function read()
     {
-        $messages = (new Message())->read();
+        $message = new Message(
+            $_POST['email'],
+            $_POST['message'],
+            $_SERVER['REMOTE_ADDR']
+        );
+        $messages = $message->read();
         $this->view('Contact/read', ['messages' => $messages]);
     }
 
@@ -30,5 +35,10 @@ class Contact extends Main
         } else {
 
         }
+    }
+
+    private function view($view, $data = [])
+    {
+        require_once "../views/$view.php";
     }
 }
