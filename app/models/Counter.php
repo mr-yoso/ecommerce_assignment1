@@ -9,7 +9,7 @@ class Counter
 
     public function __construct()
     {
-        $filename = '../resources/counter.txt';
+        $filename = 'app/resources/counter.txt';
         if (file_exists($filename)) {
             $handle = fopen($filename, 'r');
             flock($handle, LOCK_EX);
@@ -27,7 +27,7 @@ class Counter
 
     public function write()
     {
-        $filename = 'resources/counter.txt';
+        $filename = 'app/resources/counter.txt';
         $data = json_encode(['count' => $this->count]);
         $handle = fopen($filename, 'w');
         flock($handle, LOCK_EX);
