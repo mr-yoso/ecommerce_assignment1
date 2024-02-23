@@ -13,9 +13,9 @@
     See our incredible team of devs
 
     <img src="" alt="">
-    <p>Here's Adryan</p>
-    <img src="" alt="">
-    <p>Here's Rolly</p>
+<p>Here's Adryan</p>
+<img src="" alt="">
+<p>Here's Rolly</p>
 </p>
 
 
