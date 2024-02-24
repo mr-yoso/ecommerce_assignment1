@@ -17,14 +17,14 @@ class Message
 
     public function read()
     {
-        $filename = 'app/resources/messages.txt';
+        $filename = '/resources/messages.txt';
         return file($filename);
     }
 
 
     public function write()
     {
-        $filename = 'app/resources/messages.txt';
+        $filename = '/resources/messages.txt';
         $message = json_encode($this);
 
         $handle = fopen($filename, 'a');

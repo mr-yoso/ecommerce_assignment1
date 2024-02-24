@@ -19,16 +19,13 @@
 
     <p>Wanna reach us?Write your email information and message in the following form then submit</p>
 
-    <form action="" method="post">
+    <form action="/Contact/send" method="post">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-
         <br>
-
         <label for="message">Message:</label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
         <br>
-
         <button type="submit">Submit</button>
     </form>
 </body>

@@ -8,12 +8,21 @@
 </head>
 
 <body>
+    <?php
+    include("Contact.php");
+
+    $email = read();
+    ?>
+
     <ul>
         <li><a href="../Main/index.php">Landing page</a></li>
         <li><a href="../Main/about_us.php">About us</a></li>
         <li><a href="../Contact/index.php">Contact us</a></li>
         <li><a href="../Contact/read.php">See the messages we get</a></li>
     </ul>
+
+    <h1>Contact us - messages sent</h1>
+
 </body>
 
 </html>
