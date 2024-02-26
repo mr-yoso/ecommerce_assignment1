@@ -17,14 +17,14 @@ class Message
 
     public function read()
     {
-        $filename = '/resources/messages.txt';
+        $filename = 'resources/messages.txt';
         return file($filename);
     }
 
 
     public function write()
     {
-        $filename = '/resources/messages.txt';
+        $filename = 'resources/messages.txt';
         $message = json_encode($this);
 
         $handle = fopen($filename, 'a');
@@ -33,9 +33,7 @@ class Message
             flock($handle, LOCK_EX);
             fwrite($handle, $message . "\n");
             fclose($handle);
-        } else {
-
-        }
+        } 
     }
 
 }

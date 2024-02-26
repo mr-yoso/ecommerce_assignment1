@@ -19,7 +19,7 @@
 
     <p>Wanna reach us?Write your email information and message in the following form then submit</p>
 
-    <form action="/Contact/send" method="post">
+    <form action="/Contact/posted" method="POST">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br>

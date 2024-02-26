@@ -1,3 +1,6 @@
+<?php
+ namespace app\models;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +11,7 @@
 </head>
 
 <body>
-    <?php
-    include("Contact.php");
-
-    $email = read();
-    ?>
-
+  
     <ul>
         <li><a href="../Main/index.php">Landing page</a></li>
         <li><a href="../Main/about_us.php">About us</a></li>
@@ -22,6 +20,20 @@
     </ul>
 
     <h1>Contact us - messages sent</h1>
+
+    
+			
+
+		<?php
+ $messageModel = new Message;
+ $data = $messageModel->read();
+       
+		foreach($data as $index => $message){
+			echo "<h5>$message->email</h5><p>$message->name</p>";
+        }
+		?>
+		
+
 
 </body>
 

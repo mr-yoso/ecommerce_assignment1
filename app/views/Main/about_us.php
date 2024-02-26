@@ -18,7 +18,7 @@
     <h1>About Us</h1>
 
     <p>See our incredible team of devs.</p>
-    <img src="" alt="">
+    <img src="aj.png" alt="Adryan">
     <p>Here's Adryan</p>
     <img src="" alt="">
     <p>Here's Rolly</p>

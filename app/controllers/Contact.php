@@ -11,24 +11,17 @@ class Contact extends Main
         $this->view('Contact/index');
     }
 
-    public function read()
-    {
-        $message = new Message();
-        $messages = $message->read();
-        $this->view('Contact/read', ['messages' => $messages]);
-    }
+    function posted(){
+        print_r($_POST);
 
-    public function write()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $message = new Message($_POST['email'], $_POST['message'], $_SERVER['REMOTE_ADDR']); // Assuming these are the expected fields
-            $message->write();
-            header('location:/Contact/read');
-        }
-    }
+        $message = new \app\models\Message();
+        $message->name = $_POST['name']; 
+        $message->email = $_POST['email']; 
+        $message->ip = $_SERVER['REMOTE_ADDR']; 
 
-    private function view($view, $data = [])
-    {
-        require_once "../views/$view.php";
+
+        $message->write();
+
+        header('location:/Contact/read');
     }
 }
