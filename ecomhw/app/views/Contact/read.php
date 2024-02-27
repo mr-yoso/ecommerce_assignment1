@@ -27,13 +27,13 @@
 <body>
     <h1>Contact us - messages sent</h1>
 
-    <table>
+   
         <?php
         foreach ($data as $index => $message) {
-            echo "<tr><td>$message->email</td><td>$message->name</td></tr>";
+            echo "<h6>$message->email</h6><p>$message->name</p>";
         }
         ?>
-    </table>
+    
 
 </body>
 
